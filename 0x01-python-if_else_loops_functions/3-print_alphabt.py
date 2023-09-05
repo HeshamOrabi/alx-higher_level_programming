@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-for l in range(97, 123):
-    if chr(l) == 'q' or chr(l) == 'e':
+for i in range(97, 123):
+    if chr(i) == 'q' or chr(i) == 'e':
         continue
     else:
-        print("{}".format(chr(l)), end="")
+        print("{}".format(chr(i)), end="")
