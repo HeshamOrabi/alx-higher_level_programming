@@ -4,9 +4,9 @@ def print_last_digit(number):
 
     if number >= 0:
         ld = number % 10
-        print("{}".format(ld))
+        print("{}".format(ld), end="")
         return ld
     else:
         ld = (-number) % 10
-        print("{}".format(ld))
+        print("{}".format(ld), end="")
         return ld
