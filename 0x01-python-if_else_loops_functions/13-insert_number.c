@@ -1,8 +1,11 @@
 #include "lists.h"
 
 /**
+ * insert_node - insert node in sorted list
+ * @head: the head pointer
+ * @number: the number to insert
  *
- *
+ * Return: the address of the new node, or NULL if it failed
 */
 listint_t *insert_node(listint_t **head, int number)
 {
@@ -23,7 +26,7 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 
 	temp = *head;
-	while (temp->next || (temp->next)->n < number)
+	while (temp->next && (temp->next)->n < number)
 	{
 		temp = temp->next;
 	}
