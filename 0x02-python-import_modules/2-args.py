@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
+import sys
+
 if __name__ == "__main__":
-    import sys
 
     lenght = len(sys.argv) - 1
 
@@ -12,5 +13,5 @@ if __name__ == "__main__":
     else:
         print("{} arguments:".format(lenght))
 
-    for iarg in range(0, lenght):
+    for iarg in range(lenght):
         print("{}: {}".format(iarg + 1, sys.argv[iarg] + 1))
