@@ -11,5 +11,5 @@ if __name__ == "__main__":
             sum += int(arg)
         except ValueError:
             print(f"Warning: Skipping invalid argument '{arg}'")
-            
+
     print(sum)
