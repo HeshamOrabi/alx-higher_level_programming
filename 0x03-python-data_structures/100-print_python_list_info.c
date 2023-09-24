@@ -15,7 +15,7 @@ void print_python_list_info(PyObject *p)
 	if (!PyList_Check(p))
 	{
 		fprintf(stderr, "Not a list object\n");
-		exit(EXIT_FAILURE)
+		exit(EXIT_FAILURE);
 	}
 
 	printf("[*] Size of the Python List = %ld", size);
