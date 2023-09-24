@@ -18,8 +18,8 @@ void print_python_list_info(PyObject *p)
 		exit(EXIT_FAILURE);
 	}
 
-	printf("[*] Size of the Python List = %ld", size);
-	printf("[*] Allocated = %ld", ((PyListObject *)p)->allocated);
+	printf("[*] Size of the Python List = %ld\n", size);
+	printf("[*] Allocated = %ld\n", ((PyListObject *)p)->allocated);
 
 	for (i = 0; i < size; i++)
 	{
