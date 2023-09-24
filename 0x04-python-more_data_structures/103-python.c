@@ -55,12 +55,6 @@ void print_python_list(PyObject *p)
 	int i;
 	PyObject *item;
 
-	if (!PyList_Check(p))
-	{
-		fprintf(stderr, "Not a list object\n");
-		exit(EXIT_FAILURE);
-	}
-
 	size = ((PyVarObject *)(p))->ob_size;
 
 	printf("[*] Python list info\n");
