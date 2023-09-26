@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 1-square.py by Hesham Orabi
+# 0-square.py by Hesham Orabi
 """Defines a square """
 
 
