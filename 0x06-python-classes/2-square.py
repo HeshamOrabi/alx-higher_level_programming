@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 # 0-square.py by Hesham Orabi
-"""Defines a square """
+"""A module that defines a square"""
 
 
 class Square:
-    """Represents a square"""
+    """Class represents a square"""
 
     def __init__(self, size):
         """Initializing this square class
