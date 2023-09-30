@@ -74,20 +74,17 @@ class Square:
         """
         return self.__size * self.__size
 
-    def pos_print(self):
-        """returns the position in spaces"""
-        pos = ""
-        if self.size == 0:
-            return "\n"
-        for w in range(self.position[1]):
-            pos += "\n"
-        for w in range(self.size):
-            for i in range(self.position[0]):
-                pos += " "
-            for j in range(self.size):
-                pos += "#"
-            pos += "\n"
-        return pos
+    def my_print(self):
+        """Print the square with the # character."""
+        if self.__size == 0:
+            print("")
+            return
+
+        [print("") for i in range(0, self.__position[1])]
+        for i in range(0, self.__size):
+            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print("#", end="") for k in range(0, self.__size)]
+            print("")
 
     def __str__(self):
         """Define the print() representation of a Square."""
@@ -98,8 +95,4 @@ class Square:
             [print("#", end="") for k in range(0, self.__size)]
             if i != self.__size - 1:
                 print("")
-        return ("")   
-
-    def my_print(self):
-        """print the square in position"""
-        print(self.pos_print(), end='')
+        return ("")
