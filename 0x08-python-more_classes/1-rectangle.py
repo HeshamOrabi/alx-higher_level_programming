@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """ Representation """
+    """this represents a rectangle"""
 
     def __init__(self, width=0, height=0):
         """Initializing a Rectangle object with width and height attributes.
@@ -16,10 +16,8 @@ class Rectangle:
             TypeError: If width or height is not an integer.
             ValueError: If width or height is less than 0.
         """
-
-
-        self.width = width
         self.height = height
+        self.width = width
 
     @property
     def width(self):
