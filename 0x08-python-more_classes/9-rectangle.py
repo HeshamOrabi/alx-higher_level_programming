@@ -43,7 +43,7 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """ returns a new Rectangle instanc """
-        return cls(size, size)
+        return Rectangle(size, size)
 
     def __str__(self):
         """ string reprisintation of obj """
