@@ -42,7 +42,6 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """ returns a new Rectangle instanc """
         return Rectangle(size, size)
 
     def __str__(self):
