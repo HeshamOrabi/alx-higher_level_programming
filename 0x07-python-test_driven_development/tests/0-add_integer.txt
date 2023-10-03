@@ -1,0 +1,62 @@
+Test 0-add_integer file
+=======================
+
+functions
+=========
+
+Importing function from the module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Test add_integer:
+	>>> add_integer(5, 6)
+	11
+	
+	>>> add_integer(-5, -6)
+	-11
+
+	>>> add_integer(-5, 6)
+	1
+
+	>>> add_integer(5, -6)
+	-1
+
+	>>> add_integer(5.5, 6.5)
+	11
+
+	>>> add_integer(-5.9, -6.6)
+	-11
+
+	>>> add_integer(-0.9, -0.6)
+	0
+
+	>>> add_integer(2)
+	100
+
+	>>> add_integer(-2)
+	96
+
+Test add_integer Tracebacks:
+	>>> add_integer()
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+	>>> add_integer('string', -6)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(float('inf'), 0)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(float('inf'), float('-inf'))
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
