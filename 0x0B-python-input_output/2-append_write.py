@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-    function that appends a string at the end of a text file 
+    function that appends a string at the end of a text file
 
 """
 
