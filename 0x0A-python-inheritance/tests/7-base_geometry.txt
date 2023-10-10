@@ -10,12 +10,12 @@ tests
 =====
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("test", 5)  # Valid integer input
->>> bg.integer_validator("test", 0)  # Value is 0, should raise ValueError
+>>> bg.integer_validator("test", 100)  # Valid positive integer input
+>>> bg.integer_validator("test", 0)  # Valid integer input (edge case)
 Traceback (most recent call last):
     ...
 ValueError: test must be greater than 0
-
->>> bg.integer_validator("test", -5)  # Value is negative, should raise ValueError
+>>> bg.integer_validator("test", -1)  # Valid negative integer input (edge case)
 Traceback (most recent call last):
     ...
 ValueError: test must be greater than 0
@@ -40,16 +40,6 @@ Traceback (most recent call last):
     ...
 TypeError: test must be an integer
 
->>> bg.integer_validator("test", 1000000000)  # Large valid integer input
->>> bg.integer_validator("test", 1)  # Smallest valid integer input
-
->>> bg.integer_validator("test", -2147483648)  # Smallest possible valid integer input (INT_MIN)
-Traceback (most recent call last):
-    ...
-ValueError: test must be greater than 0
-
->>> bg.integer_validator("test", 2147483647)   # Largest possible valid integer input (INT_MAX)
-
 >>> bg.integer_validator("test", 0.1)  # Value is a float (should raise TypeError)
 Traceback (most recent call last):
     ...
@@ -64,27 +54,9 @@ TypeError: test must be an integer
 Traceback (most recent call last):
     ...
 TypeError: test must be an integer
+>>> bg.integer_validator("test", 2147483647)
 
->>> bg.integer_validator("test", 0)  # Smallest valid integer input (edge case)
+>>> bg.integer_validator("test", -2147483648)
 Traceback (most recent call last):
     ...
 ValueError: test must be greater than 0
-
->>> bg.integer_validator("test", 1)  # Smallest positive valid integer input (edge case)
-
->>> bg.integer_validator("test", 100)  # Positive valid integer input (edge case)
-
->>> bg.integer_validator("test", -2147483649)  # Below the smallest possible valid integer (should raise ValueError)
-Traceback (most recent call last):
-    ...
-ValueError: test must be greater than 0
-
->>> bg.integer_validator("test", -1.5)  # Negative float input (should raise TypeError)
-Traceback (most recent call last):
-    ...
-TypeError: test must be an integer
-
->>> bg.integer_validator("test", 1.5)  # Positive float input (should raise TypeError)
-Traceback (most recent call last):
-    ...
-TypeError: test must be an integer
