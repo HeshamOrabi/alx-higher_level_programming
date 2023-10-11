@@ -31,4 +31,3 @@ class Student:
         """reconstruct an instanceof of a dict"""
         for k, v in json.items():
             setattr(self, k, v)
-
