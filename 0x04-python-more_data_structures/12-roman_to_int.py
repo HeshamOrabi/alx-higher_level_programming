@@ -8,7 +8,8 @@ def roman_to_int(roman_string):
     eq_int = 0
 
     for i in range(len(roman_string)):
-        if i + 1 < len(roman_string) and (dic[roman_string[i]] < dic[roman_string[i + 1]]):
+        if i + 1 < len(roman_string) and dic[roman_string[i]] < dic[roman_string[i + 1]]:
             eq_int -= dic[roman_string[i]]
         else:
             eq_int += dic[roman_string[i]]
+    return eq_int
