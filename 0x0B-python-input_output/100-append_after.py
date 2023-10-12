@@ -16,4 +16,3 @@ def append_after(filename="", search_string="", new_string=""):
                 txt += new_string
     with open(filename, "w", encoding="UTF-8") as f:
         f.write(txt)
-        
