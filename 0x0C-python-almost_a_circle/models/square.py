@@ -26,18 +26,21 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """set args"""
         if args is not None and len(args) != 0:
-            if len(args) == 1:
-                self.id = args[0]
-            if len(args) == 2:
-                self.size = args[1]
-            if len(args) == 3:
-                self.x = args[2]
-            if len(args) == 4:
-                self.y = args[3]
+            ls = ['id', 'size', 'x', 'y']
+            for i in range(len(args)):
+                if ls[i] == 'size':
+                    setattr(self, 'width', args[i])
+                    setattr(self, 'height', args[i])
+                else:
+                    setattr(self, ls[i], args[i])
         else:
             for k, v in kwargs.items():
                 if hasattr(self, k):
-                    setattr(self, k, v)
+                    if k == 'size':
+                        setattr(self, 'width', v)
+                        setattr(self, 'height', v)
+                    else:
+                        setattr(self, k, v)
 
     @property
     def size(self):
