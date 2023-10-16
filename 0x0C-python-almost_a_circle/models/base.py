@@ -36,15 +36,20 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """write str rep to file"""
-        fname = cls.__name__ + ".json"
-        dict_list = [obj.to_dictionary() for obj in list_objs]
+        """ Save object in a file """
+        filename = "{}.json".format(cls.__name__)
+        list_dic = []
 
-        with open(fname, "w", encoding="utf-8") as f:
-            if list_objs is None:
-                f.write(cls.to_json_string([]))
-            else:
-                f.write(cls.to_json_string(dict_list))
+        if not list_objs:
+            pass
+        else:
+            for i in range(len(list_objs)):
+                list_dic.append(list_objs[i].to_dictionary())
+
+        lists = cls.to_json_string(list_dic)
+
+        with open(filename, 'w') as f:
+            f.write(lists)
 
     @classmethod
     def create(cls, **dictionary):
