@@ -9,6 +9,6 @@ args.forEach(() => {
 
 if (len === 0) {
   console.log('No argument');
-} else if (len === 1) {
+} else if (args[0]) {
   console.log(args[0]);
 }
