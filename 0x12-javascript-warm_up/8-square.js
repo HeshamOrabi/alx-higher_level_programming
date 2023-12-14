@@ -8,7 +8,7 @@ if (args.length === 0) {
   for (let i = args[0]; i > 0; i--) {
     let line = ''
     for (let j = args[0]; j > 0; j--) {
-      line += 'x';
+      line += 'X';
     }
     console.log(line);
   }
