@@ -8,5 +8,9 @@ if (args.length < 2) {
 } else {
   const newArgs = args.sort((a,b) => b - a);
 
-  console.log(newArgs[1]);
+  if (newArgs.length === 2) {
+    console.log(newArgs[0]);
+  } else {
+    console.log(newArgs[1])
+  }
 }
