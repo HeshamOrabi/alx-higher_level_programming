@@ -1,7 +1,8 @@
 #!/usr/bin/node
 
 function addMeMaybe (number, theFunction) {
-  theFunction(String(number + 1));
+  num = number + 1;
+  theFunction(String(num));
 }
 
 exports.addMeMaybe = addMeMaybe;
