@@ -1,4 +1,4 @@
-#!usr/bin/node
+#!/usr/bin/node
 
 const ar = [];
 exports.logMe = function (item) {
